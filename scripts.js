@@ -23,7 +23,7 @@ for (let i = 0; i < data.length; i += 1) {
 	desc.innerText = data[i].desc
 	// append the paragraph to the div
 	newDiv.appendChild(desc)
-    
+
 	// do the same thing for price
 	const price = document.createElement('P')
 	price.innerText = data[i].price
@@ -38,6 +38,39 @@ for (let i = 0; i < data.length; i += 1) {
 	button.innerHTML = "Add to Cart"
 	newDiv.appendChild(button)
 }
+
+
+
+const cart = [ ]
+
+
+
+//Add Items
+function addItem(name, price){
+	const item = {name:name, price:price, qty:1}
+	cart.push(item); 
+
+}
+
+//Show Items
+function showItems(){
+	console.log(`You have ${cart.length} items in your cart`)
+
+}
+
+
+addItem('Sad', 0.99);
+addItem('Happy', 1.99);
+addItem('Angry', 3.99);
+addItem('Angry', 3.99); 
+addItem('Tired', 4.59); 
+
+showItems(); 
+
+
+
+
+
 
 
 
