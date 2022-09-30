@@ -90,14 +90,48 @@ function getQty() {
 	return qty 
 }
 
+//Remove Item -------------------
+function removeItem(name, qty = 0){
+	for (let i = 0; i < cart.length; i += 1 ){
+		if (cart[i].name === name) {
+			if (qty > 0 ){
+				cart[i].qty -= 1
+			}
+			if (cart[i].qty < 1 || qty === 0) {
+				cart.splice(i, 1)
+			
+			}
+			return
+		}
+	}
 
+}
+
+
+
+
+
+//Test code ----------------------------------
 addItem('Sad', 0.99);
 addItem('Happy', 1.99);
 addItem('Angry', 3.99);
 addItem('Tired', 4.59); 
 addItem('Angry', 3.99); 
 
+//Calling Items ------------------------------
+
 showItems(); 
+
+removeItem('Angry', 1); 
+removeItem('Tired'); 
+
+
+showItems(); 
+
+
+
+
+
 
 
 
