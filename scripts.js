@@ -136,6 +136,9 @@ addItem('Happy', 1.99);
 addItem('Angry', 3.99);
 addItem('Tired', 4.59); 
 addItem('Angry', 3.99); 
+addItem('Moody', 2.23); 
+addItem('Angry', 3.99); 
+
 
 //Calling Items ------------------------------
 
