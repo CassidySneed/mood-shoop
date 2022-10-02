@@ -4,6 +4,8 @@ const itemsContainer = document.querySelector('#items')
 const itemList = document.getElementById('item-list')
 const cartQty = document.getElementById ('cart-qty')
 const cartTotal = document.getElementById ('cart-total')
+
+
 //itemList.innerHTML = '<li> Hello World</li>'
 
 //console.log(itemList)
@@ -45,9 +47,20 @@ for (let i = 0; i < data.length; i += 1) {
 	newDiv.appendChild(button)
 }
 
+const all_items_button = Array.from(document.querySelectorAll("button"))
+
+console.log(all_items_button)
+
+all_items_button.forEach(elt => elt.addEventListener('click', () => {
+	addItem(elt.getAttribute('id'), elt.getAttribute('data-price'))
+	showItems()
+  }));
+
 
 
 const cart = [ ]
+
+
 
 
 
