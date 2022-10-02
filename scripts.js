@@ -4,7 +4,7 @@ const itemsContainer = document.querySelector('#items')
 const itemList = document.getElementById('item-list')
 const cartQty = document.getElementById ('cart-qty')
 const cartTotal = document.getElementById ('cart-total')
-itemList.innerHTML = '<li> Hello World</li>'
+//itemList.innerHTML = '<li> Hello World</li>'
 
 //console.log(itemList)
 
